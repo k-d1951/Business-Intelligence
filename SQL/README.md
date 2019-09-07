@@ -113,12 +113,13 @@ SELECT title , (duration/60.0) AS duration_hours
 FROM films
 ``
 
-- Basics
+- Percentage
 ``
 SELECT (COUNT(deathdate)*100.0)/count(*) AS percentage_dead
 FROM people
 ``
 
+- Difference
 ``SELECT (MAX(release_year)-MIN(release_year)) AS difference
 FROM films
 ``
