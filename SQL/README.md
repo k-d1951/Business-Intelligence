@@ -53,3 +53,23 @@ FROM films
 WHERE release_year IN (1990 ,2000)
 AND duration>120
 ``
+
+-IS NULL is useful when combined with WHERE to figure out what data you're missing
+``
+SELECT title
+FROM films
+WHERE budget IS NULL
+``
+
+-IS NOT NULL to filter out missing values so you only get results which are not NULL
+``
+SELECT COUNT(*)
+FROM films
+WHERE language IS NOT NULL
+``
+-LIKE operator can be used in a WHERE clause to search for a pattern in a column. %  will match zero, one, or many characters in text. _ will match a single character (also NOT LIKE)
+``
+SELECT name
+FROM people
+WHERE name NOT LIKE 'A%'
+``
