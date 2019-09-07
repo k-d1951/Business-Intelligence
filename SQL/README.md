@@ -155,3 +155,10 @@ FROM films
 GROUP BY release_year
 ``
 
+- GROUP BY and ORDER BY
+``
+SELECT release_year,country, min(gross)
+FROM films
+GROUP BY release_year,country
+ORDER BY country,release_year
+``
