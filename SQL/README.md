@@ -126,9 +126,32 @@ FROM films
 
 ## Sorting, Grouping and Joins
 
-- ORDER BY
+- ORDER BY (ORDER BY always goes after GROUP BY)
 ``
-SELECT name, birthdate
-FROM people
-ORDER BY birthdate
+SELECT title
+FROM films 
+WHERE release_year IN (2000,2012)
+ORDER BY release_year
 ``
+
+- ORDER BY DESC
+``
+SELECT imdb_score,film_id
+FROM reviews
+ORDER BY imdb_score DESC
+``
+
+- Multiple column sort
+``
+SELECT release_year,duration,title
+FROM films
+ORDER BY release_year,duration
+``
+
+- GROUP BY allows you to group a result by one or more columns
+``
+SELECT release_year, max(budget)
+FROM films
+GROUP BY release_year
+``
+
