@@ -12,4 +12,4 @@
 - The less sensitive our tests, the smaller the sample size we need.
 - Supervised Learning > Features and Labels > Classification > (KNN)
 - Unsupervised Learning > Features > Clustering > KMeans
-- Deep Learning vs Explainable AI
+- Deep Learning vs Explainable AI and the situational importance of explainability
