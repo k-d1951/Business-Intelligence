@@ -1,4 +1,4 @@
-# SQL
+# Introduction to SQL
 
 ## Selecting Columns and Filtering Rows
 
@@ -161,4 +161,14 @@ SELECT release_year,country, min(gross)
 FROM films
 GROUP BY release_year,country
 ORDER BY country,release_year
+``
+
+- HAVING to filter based on the result of an aggregate function
+``
+SELECT release_year, avg(budget) AS avg_budget,avg(gross) AS avg_gross
+FROM films
+WHERE release_year > 1990
+GROUP BY release_year 
+HAVING AVG(budget)>60000000
+ORDER BY avg_gross DESC
 ``
