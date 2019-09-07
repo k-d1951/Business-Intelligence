@@ -67,6 +67,7 @@ SELECT COUNT(*)
 FROM films
 WHERE language IS NOT NULL
 ``
+
 -LIKE operator can be used in a WHERE clause to search for a pattern in a column. %  will match zero, one, or many characters in text. _ will match a single character (also NOT LIKE)
 ``
 SELECT name
