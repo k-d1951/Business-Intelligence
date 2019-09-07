@@ -1,4 +1,6 @@
-SQL
+# SQL
+
+## Selecting Columns and Filtering Rows
 
 -SELECT
 ``SELECT *``
@@ -73,4 +75,59 @@ WHERE language IS NOT NULL
 SELECT name
 FROM people
 WHERE name NOT LIKE 'A%'
+``
+
+## Aggregate Functions
+
+-SUM
+``
+SELECT SUM(gross)
+FROM films
+WHERE release_year>=2000
+``
+
+-AVERAGE
+``
+SELECT AVG(gross)
+FROM films
+WHERE title LIKE 'A%'
+``
+
+-MIN
+``
+SELECT MIN(gross)
+FROM films
+WHERE release_year=1994
+``
+
+-MAX
+``
+SELECT MAX(gross)
+FROM films
+WHERE release_year BETWEEN 2000 AND 2012
+``
+
+- AS
+``
+SELECT title , (duration/60.0) AS duration_hours
+FROM films
+``
+
+-Bsics
+``
+SELECT (COUNT(deathdate)*100.0)/count(*) AS percentage_dead
+FROM people
+``
+
+``SELECT (MAX(release_year)-MIN(release_year)) AS difference
+FROM films
+``
+
+## Sorting, Grouping and Joins
+
+-ORDER BY
+``
+SELECT name, birthdate
+FROM people
+ORDER BY birthdate
 ``
