@@ -23,3 +23,16 @@ SQL Query to get the number of free rooms
     )
 
     y;
+
+
+    class Solution {
+        public int solution(int A, int B) {
+        if (A>B){return 0;}
+        int sqrtA=(int)Math.ceil(Math.sqrt(A));
+        int sqrtB=(int)Math.floor(Math.sqrt(B));
+        if (sqrtA>sqrtB){return 0;}
+        return 1+ solution(sqrtA,sqrtB);
+    }
+
+    }
+
