@@ -3,3 +3,16 @@
      FROM Employee
      WHERE Salary NOT IN (SELECT MAX(Salary) AS SecondHighestSalary
      FROM Employee)
+
+### student class >= 5
+    SELECT class
+    FROM courses
+    GROUP BY class 
+    HAVING COUNT(DISTINCT student) >=  5 
+    
+### display the ones with nulls in other joined table
+    SELECT Customers.Name AS Customers
+    FROM Customers
+    LEFT join Orders
+    ON Customers.Id=Orders.CustomerId
+    WHERE Orders.CustomerId IS NULL
