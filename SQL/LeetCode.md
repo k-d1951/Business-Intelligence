@@ -16,3 +16,9 @@
     LEFT join Orders
     ON Customers.Id=Orders.CustomerId
     WHERE Orders.CustomerId IS NULL
+
+### join 2 tables
+    SELECT p.FirstName, p.LastName, Address.City, Address.State
+    FROM Person p
+    LEFT JOIN Address
+    ON p.PersonId=Address.PersonId
