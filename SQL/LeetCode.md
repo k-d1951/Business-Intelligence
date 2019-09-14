@@ -22,3 +22,9 @@
     FROM Person p
     LEFT JOIN Address
     ON p.PersonId=Address.PersonId
+    
+### Even Odd
+    SELECT *
+    FROM cinema
+    WHERE id%2 !=0 and description != 'boring'
+    ORDER BY rating DESC
